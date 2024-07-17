@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
+const baseUrl = "https://api.unsplash.com";
 const ImageSearch = ({ onSelectImage }) => {
   const [search, setSearch] = useState("");
   const [images, setImages] = useState([]);
@@ -8,7 +9,7 @@ const ImageSearch = ({ onSelectImage }) => {
   const searchImages = async () => {
     let API_KEY = "_1CZzpqzEpX8MkcHxAMpJO7tdGl4W7xheF46AyNgR2U";
     const response = await axios.get(
-      `https:/api.unsplash.com/search/photos?page=1&query=${search} &client_id=${API_KEY}`
+      `${baseUrl}/search/photos?page=1&query=${search} &client_id=${API_KEY}`
     );
     setImages(response.data.results);
   };
