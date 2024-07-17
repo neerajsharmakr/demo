@@ -8,8 +8,7 @@ function App() {
 
   return (
     <div className="App">
-      <h2>Name: Neeraj Sharma</h2>
-
+      <h2>Name: Neeraj Sharma </h2>
       <h2>Email:neerajsharmanitc@gmail.com</h2>
       <div className="container">
         <h1>Image Editor</h1>
